@@ -15,49 +15,48 @@
     <link rel="stylesheet" href="./assets/styles/style.css">
 
     <title>Frontend Mentor | Results summary component</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-        .attribution {
-            font-size: 11px;
-            text-align: center;
-        }
-
-        .attribution a {
-            color: hsl(228, 45%, 44%);
-        }
-    </style>
+    <script src="./assets/scripts/script.js" type="module"></script>
 </head>
 
 <body>
+    <div class="results-modal">
+        <div class="result-side">
+            <h2>Your result</h2>
+            <div class="result-counter">
+                <p class="score">76</p>
+                <p class="max-score">of 100</p>
+            </div>
+            <div class="comments-container">
+                <p class="mark">Great</p>
+                <p class="rank-comment">You scored higher than 65% of the people who have taken these tests.</p>
+            </div>
+        </div>
+        <div class="summary-side">
+            <h2>Summary</h2>
+            <ul class="criteria-container">
+                <li is="li-criteria" criteria="reaction"></li>
+                <li is="li-criteria" criteria="memory"></li>
+                <li is="li-criteria" criteria="verbal"></li>
+                <li is="li-criteria" criteria="visual"></li>
+            </ul>
+            <button class="button">Continue</button>
+        </div>
+    </div>
 
-    Your Result
-    76
-    of 100
-
-    Great
-    You scored higher than 65% of the people who have taken these tests.
-
-    Summary
-
-    Reaction
-    80 / 100
-
-    Memory
-    92 / 100
-
-    Verbal
-    61 / 100
-
-    Visual
-    72 / 100
-
-    Continue
-
-    <div class="attribution">
+    <div class="attribution" style="display: none;">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
         Coded by <a href="#">Your Name Here</a>.
     </div>
+
+    <template id="criteria">
+        <div class="white-filter">
+            <div class="heading">
+                <div class="list-icon"></div>
+                <p>lorem</p>
+            </div>
+            <p class="score">0<span>/</span><span>100</span></p>
+        </div>
+    </template>
 </body>
 
 </html>
